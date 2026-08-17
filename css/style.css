@@ -39,7 +39,6 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
 
 html {
     background-color: var(--cor-de-fundo);
-    
 }
 
 body {
@@ -56,7 +55,6 @@ main {
 #contato .container, #navegacao .container {
     display: flex;
     justify-content:space-around;
-    flex-wrap: wrap;
     text-align: left;
     align-items: center;
     gap: var(--espacamento-md);
@@ -119,6 +117,8 @@ small {
 }
 
 #depoimentos {
+    display: flex;
+    justify-content: flex-start;
     margin-bottom: var(--espacamento-lg);
 }
 
@@ -131,8 +131,6 @@ small {
 img {
     margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-sm);
-    max-width: 100%;
-    height: auto;
 }
 
 .card {
@@ -140,21 +138,19 @@ img {
     align-items: baseline;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: var(--espacamento-sm);
     background-color: black;
     color: var(--cor-da-fonte);
-    width: fit-content;
     border-radius: 12px;
-    padding: var(--espacamento-md);
     margin-bottom: var(--espacamento-md);
-
+    max-width: 100%;
 }
 
-.card-feedback p {
+.card-feedback, .card-feedback p {
     font-family: var(--fonte-detalhe);
     font-size: var(--fonte-tamanho-detalhe);
     font-weight: var(--fonte-expessura-detalhe);
     font-style: var(--fonte-estilo-detalhe);
+    padding: var(--espacamento-sm)
 }
 
 h1, h2 {
