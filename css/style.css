@@ -57,6 +57,7 @@ main {
     justify-content:space-around;
     text-align: left;
     align-items: center;
+    flex-wrap: wrap;
     gap: var(--espacamento-md);
     border: 2px groove goldenrod;
     border-radius: 6px;
