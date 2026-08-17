@@ -117,8 +117,6 @@ small {
 }
 
 #depoimentos {
-    display: flex;
-    justify-content: flex-start;
     margin-bottom: var(--espacamento-lg);
 }
 
@@ -140,8 +138,10 @@ img {
     flex-wrap: wrap;
     background-color: black;
     color: var(--cor-da-fonte);
+    width: fit-content;
     border-radius: 12px;
     margin-bottom: var(--espacamento-md);
+
 }
 
 .card-feedback, .card-feedback p {
