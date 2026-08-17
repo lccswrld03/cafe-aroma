@@ -76,6 +76,8 @@ main {
     margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-lg);
     color: var(--cor-da-fonte);
+    width: 100%; 
+    overflow-x: auto;
 }
 
 #cardapio table {
