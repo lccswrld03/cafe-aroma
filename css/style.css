@@ -10,6 +10,9 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
     --cor-da-fonte: whitesmoke;
     
     --fonte-titulo: "Bebas Neue", sans-serif;
+    --fonte-tamanho-titulo-1: 400%;
+    --fonte-tamanho-titulo-2: 200%; 
+    --fonte-expessura-titulo: 400;
     
     --fonte-rodape: "Cinzel", serif;
     --fonte-expessura-rodape: 400;
@@ -53,7 +56,7 @@ main {
 }
 
 
-.container {
+#contato .container, #navegacao .container {
     display: flex;
     justify-content:space-around;
     text-align: left;
@@ -66,18 +69,7 @@ main {
     padding: var(--espacamento-md);
 }
 
-.container-nav {
-    display: flex;
-    justify-content: space-around;
-}
-
-img {
-    margin-top: var(--espacamento-sm);
-    margin-bottom: var(--espacamento-sm);
-}
-
 #sobre {
-    font-family: Arial, Helvetica, sans-serif;
     color: var(--cor-da-fonte);
     margin-top: var(--espacamento-lg);
     margin-bottom: var(--espacamento-lg);
@@ -86,7 +78,7 @@ img {
 #cardapio {
     margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-lg);
-    color: whitesmoke;
+    color: var(--cor-da-fonte);
 }
 
 #cardapio table {
@@ -102,25 +94,44 @@ img {
     border: 2px solid darkgoldenrod;
 }
 
-table small {
+small {
     font-family: var(--fonte-texto);
 }
 
-#reserva form {
+#reserva .container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-bottom: var(--espacamento-md);
+}
+
+#reserva table, label {
     font-family: var(--fonte-texto);
     font-size: var(--fonte-tamanho-texto);
     color: var(--cor-da-fonte);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    
 }
 
 #reserva button {
     margin: 0 auto;
-    width: fit-content;
 }
 
 #depoimentos {
     margin-bottom: var(--espacamento-lg);
+}
+
+#rodape .container-rodape p {
+    font-family: var(--fonte-rodape);
+    font-weight: var(--fonte-expessura-rodape);
+    font-size: var(--fonte-tamanho-rodape);
+}
+
+img {
+    margin-top: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-sm);
 }
 
 .card {
@@ -134,7 +145,7 @@ table small {
     width: fit-content;
     border-radius: 12px;
     padding: var(--espacamento-md);
-    margin-top: 64px;
+    margin-bottom: var(--espacamento-md);
 
 }
 
@@ -145,16 +156,10 @@ table small {
     font-style: var(--fonte-estilo-detalhe);
 }
 
-.container-rodape p {
-    font-family: var(--fonte-rodape);
-    font-weight: var(--fonte-expessura-rodape);
-    font-size: var(--fonte-tamanho-rodape);
-}
-
 h1, h2 {
     font-family: var(--fonte-titulo);
-    font-weight: 400;
-    font-style: normal;
+    font-weight: var(--fonte-expessura-texto);
+    font-style: var(--fonte-expessura-titulo);
     color: var(--cor-da-fonte);
     text-shadow: 2px 2px 2px black;
     margin-bottom: var(--espacamento-md);
@@ -162,11 +167,11 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 400%;
+    font-size: var(--fonte-tamanho-titulo-1);
 }
 
 h2 {
-    font-size: 200%;
+    font-size: var(--fonte-tamanho-titulo-2);
 }
 
 p {
@@ -186,16 +191,16 @@ p.feedback {
 
 p.rodape {
     font-family: var(--fonte-rodape);
-    font-weight: 400;
-    font-style: normal;
+    font-weight: var(--fonte-expessura-rodape);
+    font-style: var(--fonte-estilo-rodape);
 }
 
 a {
     color: white;
     text-decoration: none;
     font-family: var(--fonte-rodape);
-    font-weight: 400;
-    font-style: normal;
+    font-weight: var(--fonte-expessura-rodape);
+    font-style: var(--fonte-estilo-rodape);
     
 }
 
@@ -203,14 +208,3 @@ b {
     color: goldenrod;
 }
 
-label {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: auto;
-    margin: 0 auto;
-    width: fit-content;
-    font-family: var(--fonte-texto);
-    
-}
