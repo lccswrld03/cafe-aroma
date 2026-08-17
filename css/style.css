@@ -112,6 +112,7 @@ small {
     flex-direction: column;
     width: 100%;
     max-width: 300px;
+    gap: 2px;
     
 }
 
