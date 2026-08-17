@@ -129,6 +129,8 @@ small {
 img {
     margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-sm);
+    max-width: 100%;
+    height: auto;
 }
 
 .card {
@@ -136,20 +138,21 @@ img {
     align-items: baseline;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: var(--espacamento-sm);
     background-color: black;
     color: var(--cor-da-fonte);
     width: fit-content;
     border-radius: 12px;
+    padding: var(--espacamento-md);
     margin-bottom: var(--espacamento-md);
 
 }
 
-.card-feedback, .card-feedback p {
+.card-feedback p {
     font-family: var(--fonte-detalhe);
     font-size: var(--fonte-tamanho-detalhe);
     font-weight: var(--fonte-expessura-detalhe);
     font-style: var(--fonte-estilo-detalhe);
-    padding: var(--espacamento-sm)
 }
 
 h1, h2 {
