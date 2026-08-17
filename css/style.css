@@ -39,8 +39,6 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
 
 html {
     background-color: var(--cor-de-fundo);
-    box-sizing: border-box;
-    width: 100%;
     
 }
 
