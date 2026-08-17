@@ -142,7 +142,6 @@ img {
     color: var(--cor-da-fonte);
     border-radius: 12px;
     margin-bottom: var(--espacamento-md);
-    max-width: 100%;
 }
 
 .card-feedback, .card-feedback p {
