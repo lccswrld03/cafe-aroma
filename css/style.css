@@ -1,0 +1,216 @@
+/* Cria um padrão para cada seletor. 
+ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar decorar o nome dela.  */
+:root {
+    --espacamento-lg: 56px;
+    --espacamento-md: 32px;
+    --espacamento-padrao: 16px;
+    --espacamento-sm: 8px;
+    
+    --cor-de-fundo: #2D1B0F;
+    --cor-da-fonte: whitesmoke;
+    
+    --fonte-titulo: "Bebas Neue", sans-serif;
+    
+    --fonte-rodape: "Cinzel", serif;
+    --fonte-expessura-rodape: 400;
+    --fonte-tamanho-rodape: auto;
+    --fonte-estilo-rodape: normal;
+    
+    --fonte-texto: "Alumni Sans", sans-serif;
+    --fonte-expessura-texto: 300;
+    --fonte-tamanho-texto: 160%;
+    --fonte-estilo-texto: normal;
+    
+    --fonte-detalhe: "IndiFlower", cursive;
+    --fonte-expessura-detalhe: 400;
+    --fonte-tamanho-detalhe: 100%;
+    --fonte-estilo-detalhe: italic;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    background-color: var(--cor-de-fundo);
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+body {
+    margin: var(--espacamento-padrao);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+
+.container {
+    display: flex;
+    justify-content:space-around;
+    text-align: left;
+    align-items: center;
+    gap: var(--espacamento-md);
+    border: 2px groove goldenrod;
+    border-radius: 6px;
+    color: var(--cor-da-fonte);
+    background-color: black;
+    padding: var(--espacamento-md);
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    margin-top: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-sm);
+}
+
+#sobre {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-da-fonte);
+    margin-top: var(--espacamento-lg);
+    margin-bottom: var(--espacamento-lg);
+}
+
+#cardapio {
+    margin-top: var(--espacamento-sm);
+    margin-bottom: var(--espacamento-lg);
+    color: whitesmoke;
+}
+
+#cardapio table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: fit-content;
+    
+}
+
+#cardapio table th, table td {
+    font-family: var(--fonte-detalhe);
+    padding: 16px 8px;
+    border: 2px solid darkgoldenrod;
+}
+
+table small {
+    font-family: var(--fonte-texto);
+}
+
+#reserva form {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fonte-texto);
+    font-size: var(--fonte-tamanho-texto);
+    color: var(--cor-da-fonte);
+}
+
+#reserva button {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#depoimentos {
+    margin-bottom: var(--espacamento-lg);
+}
+
+.card {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--espacamento-sm);
+    background-color: black;
+    color: var(--cor-da-fonte);
+    width: fit-content;
+    border-radius: 12px;
+    padding: var(--espacamento-md);
+    margin-top: 64px;
+
+}
+
+.card-feedback p {
+    font-family: var(--fonte-detalhe);
+    font-size: var(--fonte-tamanho-detalhe);
+    font-weight: var(--fonte-expessura-detalhe);
+    font-style: var(--fonte-estilo-detalhe);
+}
+
+.container-rodape p {
+    font-family: var(--fonte-rodape);
+    font-weight: var(--fonte-expessura-rodape);
+    font-size: var(--fonte-tamanho-rodape);
+}
+
+h1, h2 {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--cor-da-fonte);
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: var(--espacamento-md);
+    
+}
+
+h1 {
+    font-size: 400%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+p {
+     font-family: var(--fonte-texto);
+     font-size: var(--fonte-tamanho-texto);
+     font-weight: var(--fonte-expessura-texto);
+     color: var(--cor-da-fonte);
+
+}
+
+p.feedback {
+    font-family: var(--fonte-detalhe);
+    color: var(--cor-da-fonte);
+    text-shadow: 1px 1px 1px black;
+
+}
+
+p.rodape {
+    font-family: var(--fonte-rodape);
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--fonte-rodape);
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+b {
+    color: goldenrod;
+}
+
+label {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    margin: 0 auto;
+    width: fit-content;
+    font-family: var(--fonte-texto);
+    
+}
