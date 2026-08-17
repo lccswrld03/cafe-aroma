@@ -81,7 +81,7 @@ main {
 #cardapio table {
     margin: 0 auto;
     border-collapse: collapse;
-    width: fit-content;
+    max-width: 100%;
     
 }
 
@@ -142,7 +142,8 @@ img {
     gap: var(--espacamento-sm);
     background-color: black;
     color: var(--cor-da-fonte);
-    width: fit-content;
+    width: 100%;
+    max-width: 400px;
     border-radius: 12px;
     padding: var(--espacamento-md);
     margin-bottom: var(--espacamento-md);
