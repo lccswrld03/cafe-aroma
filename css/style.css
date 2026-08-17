@@ -132,6 +132,7 @@ img {
     margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-sm);
     max-width: 100%;
+    height: auto;
 }
 
 .card {
