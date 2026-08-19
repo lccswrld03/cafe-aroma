@@ -5,26 +5,26 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
     --espacamento-md: 32px;
     --espacamento-padrao: 16px;
     --espacamento-sm: 8px;
-    
+
     --cor-de-fundo: #2D1B0F;
     --cor-da-fonte: whitesmoke;
     --cor-da-borda: darkgoldenrod;
-    
+
     --fonte-titulo: "Bebas Neue", sans-serif;
     --fonte-tamanho-titulo-1: 400%;
-    --fonte-tamanho-titulo-2: 200%; 
+    --fonte-tamanho-titulo-2: 200%;
     --fonte-expessura-titulo: 400;
-    
+
     --fonte-rodape: "Cinzel", serif;
     --fonte-expessura-rodape: 400;
     --fonte-tamanho-rodape: auto;
     --fonte-estilo-rodape: normal;
-    
+
     --fonte-texto: "Alumni Sans", sans-serif;
     --fonte-expessura-texto: 300;
     --fonte-tamanho-texto: 160%;
     --fonte-estilo-texto: normal;
-    
+
     --fonte-detalhe: "IndiFlower", cursive;
     --fonte-expessura-detalhe: 400;
     --fonte-tamanho-detalhe: 100%;
@@ -65,14 +65,16 @@ img {
     border-radius: 8px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--fonte-titulo);
     font-weight: var(--fonte-expessura-texto);
     font-style: var(--fonte-expessura-titulo);
     color: var(--cor-da-fonte);
     text-shadow: 2px 2px 2px black;
     margin-bottom: var(--espacamento-md);
-    
+
 }
 
 h1 {
@@ -88,10 +90,10 @@ h4 {
 }
 
 p {
-     font-family: var(--fonte-texto);
-     font-size: var(--fonte-tamanho-texto);
-     font-weight: var(--fonte-expessura-texto);
-     color: var(--cor-da-fonte);
+    font-family: var(--fonte-texto);
+    font-size: var(--fonte-tamanho-texto);
+    font-weight: var(--fonte-expessura-texto);
+    color: var(--cor-da-fonte);
 
 }
 
@@ -101,7 +103,7 @@ a {
     font-family: var(--fonte-rodape);
     font-weight: var(--fonte-expessura-rodape);
     font-style: var(--fonte-estilo-rodape);
-    
+
 }
 
 b {
@@ -114,13 +116,13 @@ b {
     display: grid;
     grid-template-columns: repeat(5, minmax(73px, 1fr));
     margin-bottom: var(--espacamento-lg);
-    
+
 }
 
 #navegacao .item {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     height: 50px;
     border: 4px outset var(--cor-da-borda);
     border-radius: 2px;
@@ -148,18 +150,20 @@ b {
     max-width: 100%;
     margin: 0 auto;
     background-color: black;
-    
+
 }
-.carrossel, .pratos {
-display: flex;
-justify-content: flex-start;
-gap: 24px;
-overflow-x: auto;
-width: 400px;
-max-width: 100%;
-margin: 0 auto;
-scroll-snap-type: x mandatory;
-scroll-behavior: smooth;
+
+.carrossel,
+.pratos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    overflow-x: auto;
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 #cardapio .foto-modelo1 {
@@ -174,7 +178,8 @@ scroll-behavior: smooth;
     margin-bottom: var(--espacamento-md);
 }
 
-#reserva table, label {
+#reserva table,
+label {
     font-family: var(--fonte-texto);
     font-size: var(--fonte-tamanho-texto);
     color: var(--cor-da-fonte);
@@ -183,7 +188,7 @@ scroll-behavior: smooth;
     width: 100%;
     max-width: 300px;
     gap: 2px;
-    
+
 }
 
 #reserva button {
@@ -193,7 +198,7 @@ scroll-behavior: smooth;
 
 #depoimentos {
     margin-bottom: var(--espacamento-lg);
-    
+
 }
 
 #depoimentos .card {
@@ -207,7 +212,7 @@ scroll-behavior: smooth;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-   
+
 }
 
 #depoimentos .item {
