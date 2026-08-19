@@ -8,6 +8,7 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
     
     --cor-de-fundo: #2D1B0F;
     --cor-da-fonte: whitesmoke;
+    --cor-da-borda: darkgoldenrod;
     
     --fonte-titulo: "Bebas Neue", sans-serif;
     --fonte-tamanho-titulo-1: 400%;
@@ -53,7 +54,7 @@ main {
 
 small {
     font-family: var(--fonte-texto);
-    margin-bottom: var(--espacamento-lg);
+    color: var(--cor-da-fonte);
 }
 
 img {
@@ -63,7 +64,7 @@ img {
     height: auto;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--fonte-titulo);
     font-weight: var(--fonte-expessura-texto);
     font-style: var(--fonte-expessura-titulo);
@@ -79,6 +80,10 @@ h1 {
 
 h2 {
     font-size: var(--fonte-tamanho-titulo-2);
+}
+
+h4 {
+    font-family: var(--fonte-detalhe);
 }
 
 p {
@@ -107,16 +112,8 @@ b {
 #navegacao .container {
     display: grid;
     grid-template-columns: repeat(5, minmax(73px, 1fr));
-    
-    
-    /* flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-    border-radius: 8px; */
     margin-bottom: var(--espacamento-lg);
     
-    
-
 }
 
 #navegacao .item {
@@ -124,7 +121,7 @@ b {
     justify-content: center;
     align-items: center;    
     height: 50px;
-    border: 4px outset darkgoldenrod;
+    border: 4px outset var(--cor-da-borda);
     border-radius: 2px;
     background-color: oklch(15.3% 0.006 107.1);
 }
@@ -135,56 +132,39 @@ b {
     margin-bottom: var(--espacamento-md);
 }
 
+#cardapio h2 {
+    color: goldenrod;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 0;
+}
+
 #cardapio {
+    gap: 32px;
     margin-top: var(--espacamento-sm);
-    margin-bottom: var(--espacamento-md);
     color: var(--cor-da-fonte);
-}
-
-#cardapio table {
+    border: 6px groove var(--cor-da-borda);
+    border-radius: 8px;
+    max-width: 100%;
     margin: 0 auto;
-    border-collapse: collapse;
-    width: fit-content;
-    margin-bottom: var(--espacamento-lg);
+    background-color: black;
+    
 }
-
-#cardapio table th, table td {
-    font-family: var(--fonte-detalhe);
-    padding: 16px 8px;
-    border: 2px dashed darkgoldenrod;
-}
-
-#cardapio .carrossel, .pratos-modelo1 {
+.carrossel, .pratos-modelo1 {
 display: flex;
 justify-content: flex-start;
-gap: 16px;
+gap: 24px;
 overflow-x: auto;
-width: 100%;
-max-width: 950px;
+width: 400px;
+max-width: 100%;
 margin: 0 auto;
 scroll-snap-type: x mandatory;
 scroll-behavior: smooth;
-}
-
-#cardapio .bebidas-modelo2 {
-display: flex;
-justify-content: flex-start;
-gap: 16px;
-overflow-x: auto;
-width: 100%;
-max-width: 950px;
-margin: 0 auto;
 }
 
 #cardapio .foto-modelo1 {
     flex: 0 0 220px;
     height: 150px;
     scroll-snap-align: center;
-}
-
-#cardapio .foto-modelo2 {
-    flex: 0 0 220px;
-    height: 150px;
 }
 
 #reserva .container {
@@ -259,4 +239,9 @@ margin: 0 auto;
 #contato .item {
     font-family: var(--fonte-rodape);
     font-weight: var(--fonte-expessura-rodape);
+}
+
+.pratos-bebidas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
