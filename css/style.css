@@ -6,26 +6,39 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
     --espacamento-padrao: 16px;
     --espacamento-sm: 8px;
 
+
     --cor-de-fundo: #2D1B0F;
+
     --cor-da-fonte: whitesmoke;
+    --cor-da-fonte-2: darkgoldenrod;
+
     --cor-da-borda: darkgoldenrod;
+    --cor-da-borda-2: black;
+
 
     --fonte-titulo: "Bebas Neue", sans-serif;
-    --fonte-tamanho-titulo-1: 400%;
-    --fonte-tamanho-titulo-2: 200%;
     --fonte-expessura-titulo: 400;
+    --fonte-tamanho-titulo-1: 400%;
+
+    --fonte-titulo-2: "Fredericka the Great", serif;
+    --fonte-tamanho-titulo-2: 200%;
+
+    --fonte-tamanho-titulo-3: 160%;
+
 
     --fonte-rodape: "Cinzel", serif;
     --fonte-expessura-rodape: 400;
     --fonte-tamanho-rodape: auto;
     --fonte-estilo-rodape: normal;
 
+
     --fonte-texto: "Alumni Sans", sans-serif;
     --fonte-expessura-texto: 300;
     --fonte-tamanho-texto: 160%;
     --fonte-estilo-texto: normal;
 
-    --fonte-detalhe: "IndiFlower", cursive;
+
+    --fonte-detalhe: "Aboreto", system-ui;
     --fonte-expessura-detalhe: 400;
     --fonte-tamanho-detalhe: 100%;
     --fonte-estilo-detalhe: italic;
@@ -86,8 +99,9 @@ h2 {
     font-size: var(--fonte-tamanho-titulo-2);
 }
 
-h4 {
-    font-family: var(--fonte-detalhe);
+h3 {
+    font-size: var(--fonte-tamanho-titulo-3);
+    font-family: var(--fonte-rodape);
 }
 
 p {
@@ -108,17 +122,17 @@ a {
 }
 
 b {
-    color: goldenrod;
+    color: var(--cor-da-fonte-2);
 }
 
 #navegacao .container {
     display: grid;
     grid-template-columns: repeat(2, minmax(73px, 1fr));
-    margin-bottom: var(--espacamento-lg);
-    border-bottom: 2px solid var(--cor-da-borda);
+    border-bottom: 2px outset var(--cor-da-borda);
     border-collapse: collapse;
     border-radius: 8px;
     background-color: oklch(15.3% 0.006 107.1);
+    margin-bottom: var(--espacamento-lg);
 }
 
 #navegacao .item {
@@ -127,10 +141,10 @@ b {
     align-items: center;
     height: 32px;
     border-collapse: collapse;
-    border-block-start: 2px solid var(--cor-da-borda);
+    border-block-start: 2px inset var(--cor-da-borda);
     margin-bottom: 10px;
     border-radius: 8px;
-    
+
 }
 
 #sobre {
@@ -140,27 +154,32 @@ b {
 }
 
 #cardapio h2 {
-    color: goldenrod;
+    color: var(--cor-da-fonte-2);
     text-shadow: 1px 1px 1px black;
     margin-bottom: 0;
+    font-family: var(--fonte-titulo-2);
+    font-size: 160%;
 }
 
 #cardapio {
     gap: 32px;
     margin-top: var(--espacamento-sm);
     color: var(--cor-da-fonte);
-    border: 6px groove var(--cor-da-borda);
-    border-radius: 8px;
+    border: 10px solid var(--cor-da-borda-2);
+    border-radius: 6px;
     max-width: 100%;
     margin: 0 auto;
     background-color: black;
-
+    font-family: var(--fonte-detalhe);
+    font-weight: var(--fonte-expessura-detalhe);
+    font-style: var(--fonte-estilo-detalhe);
 }
 
 .carrossel,
 .pratos {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 24px;
     overflow-x: auto;
     width: 400px;
@@ -216,18 +235,21 @@ label {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
+    margin-bottom: var(--espacamento-lg);
+    font-family: var(--fonte-detalhe);
+    font-weight: var(--fonte-expessura-detalhe);
+    font-style: var(--fonte-estilo-detalhe);
 }
 
 #depoimentos .item {
     display: flex;
     align-items: center;
     color: whitesmoke;
-    border: 2px outset darkgoldenrod;
+    border-top: 2px inset var(--cor-da-borda);
+    border-bottom: 2px outset var(--cor-da-borda);
+    border-collapse: collapse;
     border-radius: 8px;
     background-color: oklch(15.3% 0.006 107.1);
-    font-family: var(--fonte-detalhe);
-    font-weight: var(--fonte-expessura-detalhe);
     flex: 0 0 400px;
     height: 100px;
     width: 120px;
@@ -237,18 +259,33 @@ label {
 #contato .container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    gap: 32px;
     max-width: 100%;
-    border: 4px inset darkgoldenrod;
+    border-top: 2px inset var(--cor-da-borda);
+    border-bottom: 2px outset var(--cor-da-borda);
+    border-collapse: collapse;
     border-radius: 8px;
+    font-family: var(--fonte-rodape);
     background-color: oklch(15.3% 0.006 107.1);
 }
 
 #contato .item,
 .endereco {
-    font-family: var(--fonte-rodape);
+
     font-weight: var(--fonte-expessura-rodape);
+}
+
+#contato h3,
+.img-rdp {
+    margin-top: var(--espacamento-sm);
+}
+
+#contato p,
+.img-rdp {
+    margin-bottom: var(--espacamento-sm);
+    font-family: var(--fonte-rodape);
+    font-size: var(--fonte-tamanho-rodape);
 }
 
 .pratos-bebidas {
