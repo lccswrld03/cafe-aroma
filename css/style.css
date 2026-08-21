@@ -111,29 +111,27 @@ b {
     color: goldenrod;
 }
 
-
-
 #navegacao .container {
     display: grid;
     grid-template-columns: repeat(2, minmax(73px, 1fr));
     margin-bottom: var(--espacamento-lg);
-    border: 4px outset var(--cor-da-borda);
+    border-bottom: 2px solid var(--cor-da-borda);
     border-collapse: collapse;
-    border-radius: 4px;
-
+    border-radius: 8px;
+    background-color: oklch(15.3% 0.006 107.1);
 }
 
 #navegacao .item {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 32px;
     border-collapse: collapse;
-    border-block-end: 2px solid var(--cor-da-borda);
-    background-color: oklch(15.3% 0.006 107.1);
+    border-block-start: 2px solid var(--cor-da-borda);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    
 }
-
-
 
 #sobre {
     color: var(--cor-da-fonte);
