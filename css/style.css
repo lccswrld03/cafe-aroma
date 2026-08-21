@@ -228,10 +228,9 @@ label {
     background-color: oklch(15.3% 0.006 107.1);
     font-family: var(--fonte-detalhe);
     font-weight: var(--fonte-expessura-detalhe);
-    row-gap: 20px;
     flex: 0 0 400px;
     height: 100px;
-    width: 200px;
+    width: 120px;
     scroll-snap-align: center;
 }
 
