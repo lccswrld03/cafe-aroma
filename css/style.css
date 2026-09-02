@@ -7,9 +7,10 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
     --espacamento-sm: 8px;
 
 
-    --cor-de-fundo: #2D1B0F;
+    --cor-de-fundo: oklch(21% 0.006 285.885);
+    --cor-de-fundo-cards: oklch(15.3% 0.006 107.1);
 
-    --cor-da-fonte: whitesmoke;
+    --cor-da-fonte: gray;
     --cor-da-fonte-2: darkgoldenrod;
 
     --cor-da-borda: darkgoldenrod;
@@ -32,7 +33,7 @@ ex: pode ser utilizado para definir a mesma fonte para varias tags, sem precisar
     --fonte-estilo-rodape: normal;
 
 
-    --fonte-texto: "Alumni Sans", sans-serif;
+    --fonte-texto: "Aladin", system-ui;
     --fonte-expessura-texto: 300;
     --fonte-tamanho-texto: 160%;
     --fonte-estilo-texto: normal;
@@ -66,6 +67,7 @@ main {
 }
 
 small {
+    margin-top: var(--espacamento-sm);
     font-family: var(--fonte-texto);
     color: var(--cor-da-fonte);
 }
@@ -74,7 +76,7 @@ small {
     margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-sm);
     max-width: 100%;
-    width: 400px;
+    width: auto;
     height: auto;
     margin: 0 auto;
 }
@@ -82,11 +84,12 @@ small {
 h1,
 h2,
 h3 {
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-titulo-2);
     font-weight: var(--fonte-expessura-texto);
     font-style: var(--fonte-expessura-titulo);
-    color: var(--cor-da-fonte);
+    color: var(--cor-da-fonte-2);
     text-shadow: 2px 2px 2px black;
+    margin-top: var(--espacamento-sm);
     margin-bottom: var(--espacamento-md);
 
 }
@@ -97,11 +100,15 @@ h1 {
 
 h2 {
     font-size: var(--fonte-tamanho-titulo-2);
+    background-color: black;
+    border-radius: 8px;
+    padding: 20px;
 }
 
 h3 {
     font-size: var(--fonte-tamanho-titulo-3);
     font-family: var(--fonte-rodape);
+    color: var(--cor-da-fonte-2);
 }
 
 p {
@@ -109,6 +116,7 @@ p {
     font-size: var(--fonte-tamanho-texto);
     font-weight: var(--fonte-expessura-texto);
     color: var(--cor-da-fonte);
+    text-shadow: 1px 1px 1px black;
 
 }
 
@@ -125,27 +133,55 @@ b {
     color: var(--cor-da-fonte-2);
 }
 
-#navegacao .container {
+.navbar {
     display: grid;
-    grid-template-columns: repeat(2, minmax(73px, 1fr));
-    border-bottom: 2px outset var(--cor-da-borda);
-    border-collapse: collapse;
-    border-radius: 8px;
-    background-color: oklch(15.3% 0.006 107.1);
-    margin-bottom: var(--espacamento-lg);
-}
-
-#navegacao .item {
-    display: flex;
-    justify-content: center;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    height: 32px;
     border-collapse: collapse;
-    border-block-start: 2px inset var(--cor-da-borda);
-    margin-bottom: 10px;
     border-radius: 8px;
+    background-color: var(--cor-de-fundo-cards);
+    margin-bottom: var(--espacamento-lg);
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+        padding: 0;
+        background-color: var(--cor-de-fundo-cards);
+
+    }
+}
+
+.nav_links {
+    display: flex;
+    justify-self: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    font-family: var(--fonte-rodape);
 
 }
+
+@media (max-width: 768px) {
+    .nav_links {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px outset var(--cor-da-borda);
+
+    }
+}
+
+.nav_logo {
+    width: auto;
+    height: auto;
+}
+
+
 
 #sobre {
     color: var(--cor-da-fonte);
@@ -156,23 +192,22 @@ b {
 #cardapio h2 {
     color: var(--cor-da-fonte-2);
     text-shadow: 1px 1px 1px black;
-    margin-bottom: 0;
     font-family: var(--fonte-titulo-2);
-    font-size: 160%;
+    margin-bottom: var(--espacamento-md);
+    border: 0;
+    
 }
 
 #cardapio {
-    gap: 32px;
-    margin-top: var(--espacamento-sm);
-    color: var(--cor-da-fonte);
-    border: 10px solid var(--cor-da-borda-2);
-    border-radius: 6px;
+    overflow-x: auto;
     max-width: 100%;
     margin: 0 auto;
-    background-color: black;
+    color: var(--cor-da-fonte);
     font-family: var(--fonte-detalhe);
     font-weight: var(--fonte-expessura-detalhe);
-    font-style: var(--fonte-estilo-detalhe);
+    border: 4px solid var(--cor-da-borda-2);
+    border-radius: 2px;
+    background-color: black;
 }
 
 .carrossel,
@@ -189,10 +224,39 @@ b {
     scroll-behavior: smooth;
 }
 
-#cardapio .foto-modelo1 {
+.carrossel::-webkit-scrollbar { height: 8px; }
+.carrossel::-webkit-scrollbar-thumb { background: var(--panel); border-radius: 4px; }
+
+.carrossel {
+    background-color: oklch(15.3% 0.006 107.1);
+}
+
+
+#cardapio .pratos {
     flex: 0 0 220px;
     height: 150px;
     scroll-snap-align: center;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#cardapio,.carrossel:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px black;
+    animation: fadeIn 0.2s ease-in-out;
+    transition: transform 0.8s, box-shadow 0.6s;
 }
 
 #reserva .container {
@@ -255,33 +319,44 @@ label {
     width: 120px;
     scroll-snap-align: center;
 }
+.card::-webkit-scrollbar { height: 8px; }
+.card::-webkit-scrollbar-thumb { background: var(--panel); border-radius: 4px; }
 
-#contato .container {
+#rodape .container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 32px;
     max-width: 100%;
-    border-top: 2px inset var(--cor-da-borda);
-    border-bottom: 2px outset var(--cor-da-borda);
-    border-collapse: collapse;
     border-radius: 8px;
     font-family: var(--fonte-rodape);
     background-color: oklch(15.3% 0.006 107.1);
 }
 
-#contato .item,
+@media (max-width: 768px) {
+    #rodape .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 15px;
+        padding: 0;
+        background-color: oklch(15.3% 0.006 107.1);
+
+    }
+}
+
+#rodape .item,
 .endereco {
 
     font-weight: var(--fonte-expessura-rodape);
 }
 
-#contato h3,
+#rodape h3,
 .img-rdp {
     margin-top: var(--espacamento-sm);
 }
 
-#contato p,
+#rodape p,
 .img-rdp {
     margin-bottom: var(--espacamento-sm);
     font-family: var(--fonte-rodape);

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Cinzel:wght@400..900&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Elsie:wght@400;900&family=Fredericka+the+Great&family=Indie+Flower&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Aladin&family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Cinzel:wght@400..900&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Elsie:wght@400;900&family=Fredericka+the+Great&family=Indie+Flower&display=swap"
         rel="stylesheet">
     <script src="js/script.js" defer></script>
     <title>Café Aroma e Cia</title>
@@ -18,25 +18,16 @@
 <body>
     <header>
         <section id="navegacao">
-            <nav class="container">
-                <div class="item">
-                    <a href="#sobre">Sobre</a>
-
-                </div>
-                <div class="item">
-                    <a href="#reserva">Reserva</a>
-                </div>
-                <div class="item">
-                    <a href="#contato">Contato</a>
-                </div>
-                <div class="item">
-                    <a href="#cardapio">Cardápio</a>
-                </div>
-                <div class="item">
-                    <a href="#contato">Onde estamos</a>
-                </div>
-                <div class="item">
-                    <a href="#depoimentos">Depoimentos</a>
+            <nav class="navbar">
+                <img src="assets/img/logo-cafe-aroma.png" width="150" height="auto"
+                    alt="Logo da cafeteria Café e Aroma e Cia." class="nav_logo">
+                <div class="nav_links">
+                    <ul class="nav_links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#reserva">Reserva</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#depoimentos">Feedback</a></li>
+                    </ul>
                 </div>
             </nav>
         </section>
@@ -44,8 +35,7 @@
             <h1>Café Aroma & Cia</h1>
         </div>
         <div id="banner">
-            <img src="assets/img/banner-cafe-aroma-e-cia.jpg" width="200" height="auto"
-                alt="Banner do espaço do Café Aroma e Cia">
+            <img src="assets/gif/banner-cafe.gif" width="200" height="auto" alt="Banner do espaço do Café Aroma e Cia">
         </div>
     </header>
     <main>
@@ -60,43 +50,48 @@
         </section>
         <section id="cardapio">
             <h2>Cardápio:</h2>
-            <small>Cardápio completo com valores disponível no balcão.</small>
             <div class="carrossel">
-                <div class="pratos">
-                    <q>Quiche Lorraine</q>
-                    <img src="assets/img/quiche-lorraine.jpg" alt="Fatia de torta salgada rústica e assada"
-                        class="foto-modelo1">
-                    <q>Risoto de Cogumelos</q>
-                    <img src="assets/img/risoto-cogumelos.jpg" alt="Prato elegante de risoto cremoso com cogumelos"
-                        class="foto-modelo1">
-                    <q>Bagel de Salmão</q>
-                    <img src="assets/img/bagel-de-salmao.jpg" alt="Sanduíche tipo bagel com salmão e cream cheese"
-                        class="foto-modelo1">
-                    <q>Salada Proteica</q>
-                    <img src="assets/img/salada-proteica.jpg" alt="Tigela com salada saudável e nutritiva"
-                        class="foto-modelo1">
-                    <q>Mac and Cheese</q>
-                    <img src="assets/img/mac-and-cheese-rustico.jpg" alt="Macarrão com queijo cremoso e gratinado"
-                        class="foto-modelo1">
-                    <q>Creme de Abóbora</q>
-                    <img src="assets/img/creme-de-abobora.jpg" alt="Tigela com sopa cremosa de abóbora"
-                        class="foto-modelo1">
-                    <q>Pão de Queijo Artesanal</q>
-                    <img src="assets/img/pao-de-queijo.jpg" alt="Cesta de pães de queijo brasileiros recém-assados"
-                        class="foto-modelo1">
-                    <q>Toast Proteico</q>
-                    <img src="assets/img/toast-proteico.jpg" alt="Torrada rústica e saudável" class="foto-modelo1">
-                    <q>Croissant Tradicional</q>
-                    <img src="assets/img/croissant-tradicional-frances.jpg" alt="Croissant francês recém-assado"
-                        class="foto-modelo1">
-                    <q>Empanada Artesanal</q>
-                    <img src="assets/img/empanada-alho-poro.jpg" alt="Empanada artesanal com massa dourada"
-                        class="foto-modelo1">
-                    <q>Sanduíche Fluxograma</q>
-                    <img src="assets/img/sanduiche-fluxograma.jpg"
-                        alt="Sanduíche tostado de presunto e queijo derretido cortado ao meio" class="foto-modelo1">
-                </div>
+
+                <q>Quiche Lorraine</q>
+                <img src="assets/img/quiche-lorraine.jpg" alt="Fatia de torta salgada rústica e assada" class="pratos">
+
+                <q>Risoto de Cogumelos</q>
+                <img src="assets/img/risoto-cogumelos.jpg" alt="Prato elegante de risoto cremoso com cogumelos"
+                    class="pratos">
+
+                <q>Bagel de Salmão</q>
+                <img src="assets/img/bagel-de-salmao.jpg" alt="Sanduíche tipo bagel com salmão e cream cheese"
+                    class="pratos">
+
+                <q>Salada Proteica</q>
+                <img src="assets/img/salada-proteica.jpg" alt="Tigela com salada saudável e nutritiva" class="pratos">
+
+                <q>Mac and Cheese</q>
+                <img src="assets/img/mac-and-cheese-rustico.jpg" alt="Macarrão com queijo cremoso e gratinado"
+                    class="pratos">
+
+                <q>Creme de Abóbora</q>
+                <img src="assets/img/creme-de-abobora.jpg" alt="Tigela com sopa cremosa de abóbora" class="pratos">
+
+                <q>Pão de Queijo Artesanal</q>
+                <img src="assets/img/pao-de-queijo.jpg" alt="Cesta de pães de queijo brasileiros recém-assados"
+                    class="pratos">
+
+                <q>Toast Proteico</q>
+                <img src="assets/img/toast-proteico.jpg" alt="Torrada rústica e saudável" class="pratos">
+
+                <q>Croissant Tradicional</q>
+                <img src="assets/img/croissant-tradicional-frances.jpg" alt="Croissant francês recém-assado"
+                    class="pratos">
+
+                <q>Empanada Artesanal</q>
+                <img src="assets/img/empanada-alho-poro.jpg" alt="Empanada artesanal com massa dourada" class="pratos">
+
+                <q>Sanduíche Fluxograma</q>
+                <img src="assets/img/sanduiche-fluxograma.jpg"
+                    alt="Sanduíche tostado de presunto e queijo derretido cortado ao meio" class="pratos">
             </div>
+            <small>Cardápio completo com valores disponível no balcão.</small>
         </section>
         <section id="reserva">
             <h2>Reserve sua mesa:</h2>
@@ -149,7 +144,7 @@
         </aside>
     </main>
 </body>
-<section id="contato">
+<section id="rodape">
     <footer class="container">
         <div class="endereco">
             <h3><b>Endereço:</b></h3>
@@ -159,7 +154,7 @@
             <img src="assets/img/logo-cafe-aroma.png" width="150" height="auto"
                 alt="Logo da cafeteria Café e Aroma e Cia." class="img-rdp">
         </div>
-        <div class="item">
+        <div class="contato">
             <h3><b>Contato:</b></h3>
             <p>email: contato_aromaecia@gmail.com</p>
             <p>whatsapp: (53) 99161-2851</p>
