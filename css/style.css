@@ -79,6 +79,7 @@ small {
     width: auto;
     height: auto;
     margin: 0 auto;
+    animation: fadeInZoom 4.5s ease-in-out 1 backwards;
 }
 
 h1,
@@ -165,6 +166,13 @@ b {
     font-family: var(--fonte-rodape);
 }
 
+a:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px whitesmoke;
+    animation: fadeIn 0.4s ease-in-out;
+    border-radius: 8px;
+}
+
 @media (max-width: 768px) {
     .nav_links {
         display: flex;
@@ -192,7 +200,6 @@ b {
     font-family: var(--fonte-titulo-2);
     margin-bottom: var(--espacamento-md);
     border: 0;
-    
 }
 
 #cardapio {
@@ -202,9 +209,7 @@ b {
     color: var(--cor-da-fonte);
     font-family: var(--fonte-detalhe);
     font-weight: var(--fonte-expessura-detalhe);
-    border: 4px solid var(--cor-da-borda-2);
     border-radius: 2px;
-    background-color: black;
 }
 
 .carrossel,
@@ -224,36 +229,36 @@ b {
 .carrossel::-webkit-scrollbar { height: 8px; }
 .carrossel::-webkit-scrollbar-thumb { background: var(--panel); border-radius: 4px; }
 
-.carrossel {
-    background-color: oklch(15.3% 0.006 107.1);
-}
-
-
 #cardapio .pratos {
     flex: 0 0 220px;
     height: 150px;
     scroll-snap-align: center;
+    border-radius: 10px;
+    animation: fadeInZoom 4.5s ease-in-out 1 backwards;
+}
+
+#cardapio q {
+    animation: fadeInZoom 4.5s ease-in 2s 1 backwards;
 }
 
 
-@keyframes fadeIn {
-    from {
+@keyframes fadeInZoom {
+    0% {
         opacity: 0;
-        transform: translateY(12px);
+        transform: scale(0.8)
     }
 
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(1);
     }
 }
 
-
-.pratos:hover {
+#depoimentos .item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 24px gray;
-    animation: fadeIn 0.4s ease-in;
-    transition: transform 0.4s, box-shadow 0.6s;
+    box-shadow: 0 8px 16px goldenrod;
+    animation: fadeIn 0.4s ease-in-out;
+    border-radius: 8px;
 }
 
 #reserva .container {
@@ -282,8 +287,19 @@ label {
 
 #depoimentos {
     margin-bottom: var(--espacamento-lg);
-
 }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 #depoimentos .card {
     display: flex;
@@ -300,6 +316,7 @@ label {
     font-family: var(--fonte-detalhe);
     font-weight: var(--fonte-expessura-detalhe);
     font-style: var(--fonte-estilo-detalhe);
+    animation: fadeInRight 3s ease-in 2s 1 backwards;
 }
 
 #depoimentos .item {
