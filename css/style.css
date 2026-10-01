@@ -212,6 +212,15 @@ a:hover {
     border-radius: 2px;
 }
 
+label {
+    margin-top: var(--espacamento-md);
+    margin-bottom: var(--espacamento-md);
+}
+
+input {
+    border-radius: 6px;
+}
+
 .carrossel,
 .pratos {
     display: flex;
@@ -226,8 +235,30 @@ a:hover {
     scroll-behavior: smooth;
 }
 
-.carrossel::-webkit-scrollbar { height: 8px; }
-.carrossel::-webkit-scrollbar-thumb { background: var(--panel); border-radius: 4px; }
+/* 1. A largura/altura total da barra de rolagem */
+.carrossel::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* 2. O "Trilho" (o fundo por onde a barrinha corre) */
+.carrossel::-webkit-scrollbar-track {
+    background: var(--cor-de-fundo);
+    border-radius: 8px;
+    margin: 0 20px;
+}
+
+/* 3. A "Barrinha" (a parte que o usuário clica e arrasta) */
+.carrossel::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 8px;
+    border: 3px solid #0f0f0f;
+}
+
+/* 4. O efeito ao passar o mouse por cima da barrinha */
+.carrossel::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-de-fundo);
+}
+
 
 #cardapio .pratos {
     flex: 0 0 220px;
